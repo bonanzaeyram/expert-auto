@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/Components/Nav/nav.css">
+</head>
+<body>
+    <button id="open">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <div class="logo">
+        <h1>Expert <span style="color: rgb(223, 0, 0);">Auto</span></h1>
+    </div>
+    
+    <ul class="menu" id="menu">
+        <span id="closeBtn">X</span>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/Pages/About.html">About</a></li>
+        <li><a href="/Pages/Services.html">Services</a></li>
+        <li><a href="/Pages/Contact.html">Contact</a></li>
+    </ul>
+    
+    <div class="sign">
+        <a href="/Pages/book.html">Book Now</a>
+    </div>
+    <script>
+        const li = document.querySelectorAll(".menu li")[0]
+        li.addEventListener("click", (e)=>{
+            e.preventDefault()
+            window.location.href='/index.html'
+        })
+
+        const open = document.getElementById("open")
+        const menu = document.getElementById("menu")
+        const closeBtn = document.getElementById("closeBtn")
+        open.addEventListener("click", (e)=>{
+            menu.style.right = "0"
+        })
+        closeBtn.addEventListener("click", (e)=>{
+            menu.style.right = "-400px"
+        })
+    </script>
+</body>
+</html>

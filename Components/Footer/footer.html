@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/Components/Footer/footer.css">
+</head>
+<body>
+    <footer>
+        <div class="top-foot">
+            <div class="left">
+                <p>OUR NEWSLETTER</p>
+                <h1>Subscribe To Our Newsletter</h1>
+                <span>Subscribe to our newsletter and receive exclusive content, expert insights, and special offers delivered directly to your inbox.</span>
+            </div>
+            <div class="right">
+                <form name="submit-to-google-sheet">
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <button type="submit">Sunbscribe</button><br>
+                    <span style="color: greenyellow;" id="msg"></span>
+                </form>
+            </div>
+        </div>
+
+        <div class="bottom-footer">
+            <div class="left">
+                <p>Expert<span>Auto</span></p>
+                <p>With a rich legacy spanning 2 years, our commitment to excellence in car servicing is unwavering.</p>
+            </div>
+            <div class="right">
+                <div class="serv">
+                    <h1>Our Services</h1>
+                    <li>Skilled Mechanics</li>
+                    <li>Routine Maintenance</li>
+                    <li>Customized Solutions</li>
+                    <li>Competitive Pricing</li>
+                    <li>Satisfaction Guaranteed</li>
+                </div>
+                <div class="contact-info">
+                    <h1>Contact Info</h1>
+
+                    <p>Experience the magic of a rejuvenated ride as we pamper your car with precision care</p>
+
+                    <span>Phone: <h2>+233 554435925</h2></span>
+                    <span>Email <h2>info@expertauto.com</h2></span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const msg = document.getElementById("msg")
+
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyvjv-arA-Eo34UiAPVwl7W8UgoPwlLbCYZDoevj8WdrYNXOwvrFBOOSuYHtm5KO2_l/exec'
+        const form = document.forms['submit-to-google-sheet']
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Thank You for Subscribing!!"
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+</body>
+</html>

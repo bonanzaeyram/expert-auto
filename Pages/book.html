@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="/Style/book.css">
+</head>
+<body>
+    <nav class="navbar"></nav>
+    <div class="container">
+        <header>Booking</header>
+
+        <form name="submit-to-google-sheet">
+                    <span class="title">Personal Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Full Name</label>
+                            <input type="text" placeholder="Enter your name" name="Name" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Date of Birth</label>
+                            <input type="date" placeholder="Enter birth date" name="DOB" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Email</label>
+                            <input type="email" placeholder="Enter your email" name="Email" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Mobile Number</label>
+                            <input type="number" placeholder="Enter mobile number" name="Number" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Gender</label>
+                            <select name="Gender" required>
+                                <option disabled selected>Select gender</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Others</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Occupation</label>
+                            <input type="text" placeholder="Enter your ccupation" name="Occupation" required>
+                        </div>
+                    </div>
+                        <span class="title">Address Details</span>
+    
+                        <div class="fields">
+                            <div class="input-field">
+                                <label>Address Type</label>
+                                <input type="text" placeholder="Permanent or Temporary" name="Address Type" required>
+                            </div>
+    
+                            <div class="input-field">
+                                <label>Nationality</label>
+                                <input type="text" placeholder="Enter nationality" name="Nationality" required>
+                            </div>
+    
+                            <div class="input-field">
+                                <label>State</label>
+                                <input type="text" placeholder="Enter your state" name="State" required>
+                            </div>
+    
+                            <div class="input-field">
+                                <label>District</label>
+                                <input type="text" placeholder="Enter your district" name="District" required>
+                            </div>
+    
+                            <div class="input-field">
+                                <label>Block Number</label>
+                                <input type="number" placeholder="Enter block number" name="Block Number" required>
+                            </div>
+                        </div>
+                    <button class="nextBtn">Submit</button>
+        </form>
+    </div>
+    <footer id="footer"></footer>
+    <script src="/Scripts/book.js"></script>
+    <script src="/index.js"></script>
+</body>
+</html>

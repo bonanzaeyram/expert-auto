@@ -1,0 +1,321 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+#landing{
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.116), rgba(0, 0, 0, 0.486)), url(/Assets/imgs/lambo.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#landing .hero{
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    padding: 20px 50px;
+}
+.hero .left{
+    margin-top: 40vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 70%;
+}
+.hero .left{
+    h1{
+        font-size: 80px;
+        color: white;
+    }
+    a{
+        font-size: 1.3rem;
+        text-decoration: none;
+        background: #da042a;
+        color: white;
+        border-radius: 5px;
+        padding: 10px;
+        width: 10rem;
+    }
+    a:hover{
+        transform: scale(1.1);
+        transition: 0.3s;
+    }
+}
+.convic{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.convic div{
+    height: 300px;
+    width: 100%;
+    background: rgb(36, 40, 54);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    padding: 10px;
+    box-shadow: 0 0 10px rgb(18, 19, 20);
+
+    img{
+        width: inherit;
+    }
+}
+.experience{
+    padding: 20px 50px;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.experience .left img{
+    width: 30rem;
+}
+.experience .right{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    h1{
+        width: 75%;
+        font-size: 3rem;
+    }
+    p{
+        line-height: 25px;
+        color: rgb(97, 97, 97);
+        font-size: 1.1rem;
+    }
+    a{
+        font-size: 0.9rem;
+        text-decoration: none;
+        background: #da042a;
+        color: white;
+        border-radius: 5px;
+        padding: 10px;
+        width: 8rem;
+        text-align: center;
+    }
+    a:hover{
+        transform: scale(1.1);
+        transition: 0.3s;
+    }
+}
+.experience .right p:first-child{
+    color: #da042a;
+    font-size: 1rem;
+}
+.service-title{
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+
+    p{
+        color: #da042a;
+    }
+    h1{
+        font-size: 3rem;
+    }
+    span{
+        color: rgb(97, 97, 97);
+        letter-spacing: 1px;
+    }
+}
+.service-box{
+    padding: 20px 50px;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+.service-box .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    img{
+        width: 10rem;
+        border-radius: 50%;
+    }
+    span{
+        line-height: 25px;
+        color: rgb(97, 97, 97);
+        text-align: center;
+    }
+    p{
+        font-weight: 500;
+        font-size: 1.3rem;
+        color: black;
+    }
+}
+.consumption{
+    position: relative;
+    min-height: 65vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/Assets/imgs/customisation.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.consumption .discription{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+
+    p{
+        color: #da042a;
+        font-weight: 500;
+        font-size: 1.1rem;
+    }
+    h1{
+        color: white;
+        font-size: 3rem;
+        width: 70%;
+    }
+    span{
+        color: white;
+        font-size: 1.1rem;
+        width: 50%;
+    }
+}
+.consumption .projects{
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+.consumption .projects .card{
+    width: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    p{
+        font-size: 5rem;
+        font-weight: 500;
+    }
+    span{
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 1028px){
+    .experience{
+        flex-direction: column;
+    }
+    .experience .right h1{
+        font-size: 2rem;
+    }
+    .experience .left img{
+        width: 35rem;
+    }
+    .service-box{
+        grid-template-columns: 1fr 1fr;
+    }
+    .hero .left h1{
+        font-size: 70px;
+    }
+    .consumption .discription{
+        h1{
+            width: 100%;
+            font-size: 2.5rem;
+        }
+        span{
+            width: 100%;
+        }
+    }
+    .consumption .projects{
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    .consumption .projects .card{
+        p{
+            font-size: 4rem;
+        }
+        span{
+            font-size: 1.3rem;
+        }
+    }
+}
+
+@media (max-width: 600px){
+    .hero .left{
+        width: 100%;
+        h1{
+            font-size: 40px;
+        }
+    }
+    .convic{
+        flex-direction: column;
+
+        div{
+            height: 200px;
+        }
+        img{
+            height: inherit;
+        }
+    }
+    .experience .left img{
+        width: 23rem;
+    }
+    .experience{
+        padding: 20px;
+    }
+    .service-box{
+        padding: 20px;
+    }
+    .service-box .card{
+        span{
+            font-size: 0.9rem;
+            line-height: 20px;
+        }
+        p{
+            font-size: 1.2rem;
+            text-align: center;
+        }
+        img{
+            width: 9rem;
+        }
+    }
+    .service-title h1{
+        font-size: 2rem;
+    }
+    .service-title span{
+        text-align: center;
+    }
+    .consumption{
+        padding: 10px;
+    }
+    .consumption .discription h1{
+        font-size: 1.5rem;
+    }
+    .consumption .discription span{
+        font-size: 1rem;
+    }
+    .consumption .projects .card{
+        p{
+            font-size: 2.5rem;
+        }
+        span{
+            font-size: 1.2rem;
+        }
+    }
+}
